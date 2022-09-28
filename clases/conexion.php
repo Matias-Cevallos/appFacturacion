@@ -5,7 +5,7 @@ class Mysql
     private $host   ="localhost";
     private $usuario="root";
     private $clave  ="jayi100177";
-    private $db     ="checklistnist";
+    private $db     ="desinseg";
     public $conexion;
     public function __construct(){
         $this->conexion = new mysqli($this->host, $this->usuario, $this->clave,$this->db) or die(mysql_error());

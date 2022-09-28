@@ -12,8 +12,8 @@
 
 </head>
 <body>
-<?php echo "Hello World" ?>
-<?php
+<?php 
+
 include("clases/conexion.php");
 $con = new Mysql();
 $tabla2="menu";
@@ -24,6 +24,8 @@ $tabla2="menu";
      $menu=$value['menu'];
      echo $menu;
   }
+ }
+
 ?>
 
     <nav class="navbar navbar-expand-lg bg-light">
