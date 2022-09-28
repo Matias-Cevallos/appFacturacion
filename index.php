@@ -17,14 +17,19 @@
 include("clases/conexion.php");
 $con = new Mysql();
 $tabla2="menu";
- $sql2="SELECT * FROM `menu` WHERE `cod_estado`=1;";
+$sql2="SELECT * FROM `menu` WHERE `cod_estado`=1 and cod_empresa=1;";
  $r2=$con->buscar3($tabla2,$sql2);
  if($r2){
   foreach ($r2 as $value){
-     $menu=$value['menu'];
-     echo $menu;
+     $cmenu=$value['cod_menu'];
+    }
   }
- }
+
+
+
+$tabla3="submenu";
+$sql3="SELECT * FROM `submenu` WHERE `cod_estado`=1 and cod_menu='.$cmenu.';";
+$r3=$con->buscar3($tabla3,$sql3);
 
 ?>
 
@@ -40,17 +45,48 @@ $tabla2="menu";
                 <a class="nav-link active" aria-current="page" href="#">INICIO</a>
               </li>
               
+             <?php
+             if($r2){
+              foreach ($r2 as $value){
+                 $menu=$value['menu'];
+                 //echo $menu;
+              
+             
+            
+               echo '
+
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                '.$menu.'
                 </a>
+                 ';
+                 
+                   
+                echo '
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                ';
+                if($r3){
+                  foreach ($r3 as $value){
+                     $smenu=$value['submenu'];
+                    // echo $smenu;
+                  echo '<li><a class="dropdown-item" href="#">'.$smenu.'</a></li>';
+                  
+                }
+              }
+              echo '
                 </ul>
-              </li>
+                </li>
+             ';
+
+             
+
+              
+             
+
+            
+                  }
+                }
+              ?>
               
             </ul>
             <form class="d-flex" role="search">
