@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Home</title>
@@ -10,11 +9,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-      <script src="js/menu.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
@@ -76,10 +70,9 @@ $tabla3="submenu";
                 if($r3){
                   foreach ($r3 as $value){
                      $smenu=$value['submenu'];
-                     $smlink=$value['cod_submenu'];
-                     //$smlink="$smlink";
-                    // echo $smlink;
-                  echo "<li><a class='dropdown-item'  onclick='submenu($smlink)' href=#>$smenu</a></li>";
+                     $smlink=$value['link'];
+                    // echo $smenu;
+                  echo '<li><a class="dropdown-item" href="'.$smlink.'">'.$smenu.'</a></li>';
                   
                 }
               }
@@ -101,10 +94,18 @@ $tabla3="submenu";
           </div>
         </div>
       </nav>
-      
-      <div id="resultado">resultado</div>
 
-     
+      <div>
+        <?php
+        include("mantenimiento/usuario.php")
+        ?>
+
+      </div>
+
+      
+      <div id='resultado'></div>
+
+      <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
