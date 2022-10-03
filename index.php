@@ -96,6 +96,8 @@ $r3=$con->buscar3($tabla3,$sql3);
           </div>
         </div>
       </nav>
+      
+      <div id='resultado'></div>
 
       <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
