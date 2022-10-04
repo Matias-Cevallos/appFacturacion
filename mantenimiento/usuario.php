@@ -32,8 +32,8 @@ echo '
  
      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
        <div class="card-body">
-                    <table class="table table-dark">
-                    <thead>
+                    <table class="table table-striped">
+                    <thead class="thead-dark">
                         <tr>
                         <th scope="col">Codigo</th>
                         <th scope="col">Usuario</th>
@@ -62,7 +62,9 @@ echo '
                           echo '<td>'.$clave.'</td>';
                           echo '<td>'.$empresa.'</td>';
                           echo '<td>'.$perfil.'</td>';
-                          echo '<td><a title="Los Tejos" href="http://www.lostejos.com"><img src="casarural.jpg" alt="Los Tejos" /></a></td>';
+                          echo '<td><a title="Actualizar" href="#"><img src="./img/actualizar.png" alt="Actualizar" /></a></td>';
+                          echo '<td><a title="Eliminar" href="#"><img src="./img/eliminar.png" alt="Eliminar" /></a></td>';
+                         
                           echo '</tr>';  
 
                           }
