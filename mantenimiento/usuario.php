@@ -10,7 +10,7 @@ $clave="";
 //echo $sql2;
  $r2=$con->buscar3($tabla2,$sql2);
  
-
+ 
 
 echo '
 <div class="container">
@@ -35,10 +35,11 @@ echo '
                     <table class="table table-dark">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">Codigo</th>
                         <th scope="col">Usuario</th>
                         <th scope="col">Clave</th>
                         <th scope="col">Empresa</th>
+                        <th scope="col">Perfil</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,13 +49,19 @@ echo '
                            $cusuario=$value['cod_usuario'];
                            $usuario=$value['usuario'];
                            $clave=$value['clave'];
+                           $codEmpresa=$value['cod_empresa'];
+                           $codPerfil=$value['cod_perfil'];
+                           $empresa=empresa($codEmpresa);
+                           $perfil=perfil($codPerfil);
+
                           //$smenu="'".$smenu."'";
                           //echo $cusuario;
                           echo '<tr>';
                           echo '<th scope="row">'.$cusuario.'</th>';
                           echo '<td>'.$usuario.'</td>';
                           echo '<td>'.$clave.'</td>';
-                          echo '<td>@mdo</td>';
+                          echo '<td>'.$empresa.'</td>';
+                          echo '<td>'.$perfil.'</td>';
                           echo '</tr>';  
 
                           }

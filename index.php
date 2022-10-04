@@ -21,6 +21,7 @@
 <?php 
 
 include("clases/conexion.php");
+
 $con = new Mysql();
 $tabla2="menu";
 $sql2="SELECT * FROM `menu` WHERE `cod_estado`=1 and cod_empresa=1;";
