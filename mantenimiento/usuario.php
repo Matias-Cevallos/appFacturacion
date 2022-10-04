@@ -62,6 +62,7 @@ echo '
                           echo '<td>'.$clave.'</td>';
                           echo '<td>'.$empresa.'</td>';
                           echo '<td>'.$perfil.'</td>';
+                          echo '<td><a title="Los Tejos" href="http://www.lostejos.com"><img src="casarural.jpg" alt="Los Tejos" /></a></td>';
                           echo '</tr>';  
 
                           }
