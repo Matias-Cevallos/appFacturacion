@@ -34,8 +34,8 @@ class Mysql
     //ACTUALIZAR
     public function actualizar($tabla, $campos, $condicion){
       $sql="UPDATE $tabla SET $campos WHERE $condicion";
-      //echo $sql;
-     // exit;
+      echo $sql;
+      exit;
         $resultado  =   $this->conexion->query($sql) or die($this->conexion->error);
         if($resultado)
             return true;

@@ -13,6 +13,7 @@
       <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
       <script src="js/menu.js"></script>
+      <script src="js/usuario.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -103,7 +104,7 @@ $tabla3="submenu";
         </div>
       </nav>
       
-      <div id="resultado">resultado</div>
+      <div id="resultado"></div>
 
      
 </body>

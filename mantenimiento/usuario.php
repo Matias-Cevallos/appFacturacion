@@ -1,6 +1,7 @@
 
 
 <?php
+
 $con = new Mysql();
 $tabla2="usuario";
 $sql2="SELECT * FROM `usuario` WHERE `cod_estado`=1;";
@@ -58,12 +59,27 @@ echo '
                           //echo $cusuario;
                           echo '<tr>';
                           echo '<th scope="row">'.$cusuario.'</th>';
-                          echo '<td>'.$usuario.'</td>';
-                          echo '<td>'.$clave.'</td>';
-                          echo '<td>'.$empresa.'</td>';
-                          echo '<td>'.$perfil.'</td>';
-                          echo '<td><a title="Actualizar" href="#"><img src="./img/actualizar.png" alt="Actualizar" /></a></td>';
-                          echo '<td><a title="Eliminar" href="#"><img src="./img/eliminar.png" alt="Eliminar" /></a></td>';
+                          echo '<td><input type="text" class="form-control" id="usuario'.$cusuario.'" value="'.$usuario.'"></td>';
+                          echo '<td><input type="text" class="form-control" id="clave'.$cusuario.'" value="'.$clave.'"></td>';
+                          echo '<td><select class="form-select" id="empresa'.$cusuario.'" name="empresa">
+                                                  <option selected>'.$empresa.'</option>
+                                                  <option>Desinseg</option>
+                                                  <option>Unnomotors</option>
+                                                  <option>Iess</option>
+                                                  <option>Otro</option>
+                                                  </select>
+                                </td>';
+                          echo '<td>
+                                        <select class="form-select" id="perfil'.$cusuario.'" name="perfil">
+                                        <option selected>'.$perfil.'</option>
+                                        <option>Administrador</option>
+                                        <option>Supervisor</option>
+                                        <option>Usuarop</option>
+                                        <option>Otro</option>
+                                        </select>
+                                </td>';
+                          echo '<td><a title="Actualizar" onclick="actualizar('.$cusuario.')" href="#"><img src="./img/actualizar.png" alt="Actualizar" /></a></td>';
+                          echo '<td><a title="Eliminar" onclick="eliminar('.$cusuario.')" href="#"><img src="./img/eliminar.png" alt="Eliminar" /></a></td>';
                          
                           echo '</tr>';  
 

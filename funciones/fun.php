@@ -28,4 +28,50 @@ function perfil($codigo) {
      }
     return $perfil;
 }
+
+function insertar($tabla,$columna,$valor) {
+   $val=0;
+   $con = new Mysql();
+   $sql2="INSERT INTO $tabla ($columna)VALUES($valor)";
+   
+   $r2=$con->buscar3($tabla,$sql2);
+    if($r2){
+     $val=1;
+     }else
+     {
+     $val=0;
+     }
+    return $val;
+}
+
+function actualizar($tabla,$columna,$condicion) {
+   $val=0;
+   $con = new Mysql();
+   $sql2="UPDATE $tabla SET $columna WHERE $condicion";
+   
+   $r2=$con->buscar3($tabla,$sql2);
+    if($r2){
+     $val=1;
+     }else
+     {
+     $val=0;
+     }
+    return $val;
+}
+
+function eliminar($tabla,$condicion) {
+   $val=0;
+   $con = new Mysql();
+   $sql2="DELETE $tabla WHERE $condicion";
+   
+   $r2=$con->buscar3($tabla,$sql2);
+    if($r2){
+     $val=1;
+     }else
+     {
+     $val=0;
+     }
+    return $val;
+}
+
 ?>
