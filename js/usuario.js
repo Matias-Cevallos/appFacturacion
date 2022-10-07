@@ -1,12 +1,32 @@
 function nuevo(){
-    var usuario=document.getElementById('usuario').value;
-  //  var clave=document.getElementById('clave').value; 
-   // var empresa=document.getElementById('empresa').value;
-   // var perfil=document.getElementById('perfil').value; 
-   // var nombre=document.getElementById('nombre').value; 
-console.log("Nuevo"+usuario);
-alert(usuario);
+    var usuario=document.getElementById('user').value;
+    var clave=document.getElementById('pass').value; 
+    var empresa=document.getElementById('emp').value;
+    var perfil=document.getElementById('perf').value; 
+    var nombre=document.getElementById('nomb').value; 
+//console.log("Nuevo"+usuario);
+//alert(usuario);
 
+var parametros = {
+  "usuario": usuario,
+  "clave": clave,
+  "nombre": nombre,
+  "empresa": empresa,
+  "perfil": perfil
+  };  
+
+  $.ajax({
+      data: parametros,
+      url: "mantenimiento/nusuario.php",
+      type: 'post',
+       beforeSend: function () {//elemento que queramos poner mientras ajax carga
+         $("#resultado").html("Procesando, espere por favor...");
+       },
+       success: function (response) {//resultado de la función
+        $("#resultado").html(response);
+        
+         }
+      });
 
 
 

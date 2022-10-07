@@ -97,7 +97,7 @@ echo '
      <div class="card-header" id="headingTwo">
        <h5 class="mb-0">
          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-           NUEVO CLIENTE
+           NUEVO USUARIO
          </button>
        </h5>
      </div>
@@ -105,21 +105,21 @@ echo '
        <div class="card-body">
                        
                         <div class="form-group">
-                            <label for="usuario">Usuario:</label>
-                            <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp" placeholder="Ingrese Usuario">
+                            <label for="user">Usuario:</label>
+                            <input type="text" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Ingrese Usuario">
                                
                         </div>
                         <div class="form-group">
                             <label for="pass">Contraseña</label>
-                            <input type="password" class="form-control" id="clave" placeholder="Contraseña">
+                            <input type="password" class="form-control" id="pass" placeholder="Contraseña">
                         </div>
                         <div class="form-group">
                             <label for="nomb">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                            <input type="text" class="form-control" id="nomb" placeholder="Nombre">
                         </div>
                         <div class="form-group">
-                        <label for="per">Perfil:</label>
-                                <select class="form-control" id="perfil" name="perfil">
+                        <label for="perf">Perfil:</label>
+                                <select class="form-control" id="perf" name="perf">
                                     <option>ADMINISTRADOR</option>
                                     <option>SUPERVISOR</option>
                                     <option>USUARIO</option>
@@ -128,7 +128,7 @@ echo '
                         </div>
                         <div class="form-group">
                         <label for="emp">Empresa:</label>
-                        <select class="form-control" id="empresa" name="empresa">
+                        <select class="form-control" id="emp" name="emp">
                         <option>DESINSEG</option>
                         <option>UNNOMOTORS</option>
                         <option>IESS</option>
