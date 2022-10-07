@@ -1,7 +1,7 @@
 
 
 <?php
-
+//require("./clases/conexion.php");
 $con = new Mysql();
 $tabla2="usuario";
 $sql2="SELECT * FROM `usuario` WHERE `cod_estado`=1;";
@@ -63,19 +63,19 @@ echo '
                           echo '<td><input type="text" class="form-control" id="clave'.$cusuario.'" value="'.$clave.'"></td>';
                           echo '<td><select class="form-select" id="empresa'.$cusuario.'" name="empresa">
                                                   <option selected>'.$empresa.'</option>
-                                                  <option>Desinseg</option>
-                                                  <option>Unnomotors</option>
-                                                  <option>Iess</option>
-                                                  <option>Otro</option>
+                                                  <option>DESINSEG</option>
+                                                  <option>UNNOMOTORS</option>
+                                                  <option>IESS</option>
+                                                  <option>OTRO</option>
                                                   </select>
                                 </td>';
                           echo '<td>
                                         <select class="form-select" id="perfil'.$cusuario.'" name="perfil">
                                         <option selected>'.$perfil.'</option>
-                                        <option>Administrador</option>
-                                        <option>Supervisor</option>
-                                        <option>Usuarop</option>
-                                        <option>Otro</option>
+                                        <option>ADMINISTRADOR</option>
+                                        <option>SUPERVISOR</option>
+                                        <option>USUARIO</option>
+                                        <option>OTRO</option>
                                         </select>
                                 </td>';
                           echo '<td><a title="Actualizar" onclick="actualizar('.$cusuario.')" href="#"><img src="./img/actualizar.png" alt="Actualizar" /></a></td>';
@@ -103,43 +103,43 @@ echo '
      </div>
      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
        <div class="card-body">
-                        <form>
+                       
                         <div class="form-group">
                             <label for="usuario">Usuario:</label>
-                            <input type="text" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Ingrese Usuario">
+                            <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp" placeholder="Ingrese Usuario">
                                
                         </div>
                         <div class="form-group">
                             <label for="pass">Contraseña</label>
-                            <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+                            <input type="password" class="form-control" id="clave" placeholder="Contraseña">
                         </div>
                         <div class="form-group">
                             <label for="nomb">Nombre</label>
-                            <input type="text" class="form-control" id="nomb" placeholder="Nombre">
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
                         </div>
                         <div class="form-group">
                         <label for="per">Perfil:</label>
-                                <select class="form-control" id="per" name="perfil">
-                                    <option>Administrador</option>
-                                    <option>Supervisor</option>
-                                    <option>Usuario</option>
-                                    <option>Otro</option>
+                                <select class="form-control" id="perfil" name="perfil">
+                                    <option>ADMINISTRADOR</option>
+                                    <option>SUPERVISOR</option>
+                                    <option>USUARIO</option>
+                                    <option>OTRO</option>
                                 </select>
                         </div>
                         <div class="form-group">
                         <label for="emp">Empresa:</label>
-                        <select class="form-control" id="emp" name="empresa">
-                        <option>Desinseg</option>
-                        <option>Unnomotors</option>
-                        <option>Iess</option>
-                        <option>Otro</option>
+                        <select class="form-control" id="empresa" name="empresa">
+                        <option>DESINSEG</option>
+                        <option>UNNOMOTORS</option>
+                        <option>IESS</option>
+                        <option>OTRO</option>
                         </select>
                             </div>
                             <div class="form-check">
                             </div>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="submit" onclick="nuevo()"  class="btn btn-primary">Guardar</button>
                         
-                    </form>
+                   
           
        </div>
      </div>

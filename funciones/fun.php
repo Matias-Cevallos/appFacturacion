@@ -29,19 +29,32 @@ function perfil($codigo) {
     return $perfil;
 }
 
-function insertar($tabla,$columna,$valor) {
+function empresaCod($empresa) {
    $val=0;
    $con = new Mysql();
-   $sql2="INSERT INTO $tabla ($columna)VALUES($valor)";
-   
+   $sql2="SELECT cod_empresa FROM empresa where empresa='".$empresa."'";
+   $tabla='empresa';
    $r2=$con->buscar3($tabla,$sql2);
     if($r2){
-     $val=1;
-     }else
-     {
-     $val=0;
+      foreach ($r2 as $value){
+         $empresa=$value['cod_empresa'];
+        }
      }
-    return $val;
+    return $empresa;
+}
+
+function perfilCod($perfil) {
+   $val=0;
+   $con = new Mysql();
+   $sql2="SELECT cod_perfil FROM perfil where perfil='".$perfil."'";
+   $tabla='perfil';
+   $r2=$con->buscar3($tabla,$sql2);
+    if($r2){
+      foreach ($r2 as $value){
+         $cperfil=$value['cod_perfil'];
+        }
+     }
+    return $cperfil;
 }
 
 function actualizar($tabla,$columna,$condicion) {

@@ -1,6 +1,15 @@
 function nuevo(){
+    var usuario=document.getElementById('usuario').value;
+  //  var clave=document.getElementById('clave').value; 
+   // var empresa=document.getElementById('empresa').value;
+   // var perfil=document.getElementById('perfil').value; 
+   // var nombre=document.getElementById('nombre').value; 
+console.log("Nuevo"+usuario);
+alert(usuario);
 
-console.log("Nuevo");
+
+
+
 }
 
 function actualizar(codigo){
